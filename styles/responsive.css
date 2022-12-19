@@ -1,4 +1,17 @@
+@media  (max-width:1125px) {
+  
+    .nav-li {
+      font-size: 12px;   
+    } 
+
+   
 @media  (max-width:1070px) {
+    .contact-us {
+       
+        width: 200px;
+        height: 50px;
+         
+        font-size: 20px;}
     .world-map {
         
         height: auto;
@@ -8,6 +21,7 @@
     } 
     .h1 {
         font-size: 15px;
+        margin-right: 200px;
     }
     
    .h2{
@@ -20,7 +34,8 @@
 
     top:50%; 
     font-family: 'Poppins', sans-serif;
-    font-size: 20px; }
+    font-size: 20px; 
+}
     .contact-us2 {
     
         width: 150px;
@@ -37,16 +52,428 @@
     width: 400px;
     height: auto;
 }
-.contact-us  {
+
+}
+@media  (max-width:1040px) {
+    .h4-quadro {
+        top: 65%;
+        font-size: 18px;
+    }
+    .quadro3 {
+        margin-top: 100px;         
+       
+       }
+       .quadro4 {
+           margin-top: 100px;
+          }
+.h4-title-online {
+            margin-top: 100px;
+            margin-left: 20%;
+            margin-bottom: 10px;
+            
+            font-size: 40px;
+
+}
+@media  (max-width:1040px) {
+    .nav-li {
+        font-size: 10px;   
+      } 
+      .h1 {
+          font-size: 15px;
+          margin-right: 150px;
+      }
+    .trans-service-wraper {
+        display: block; 
+       
+    }
+    .p-trans-tech {
+        margin-bottom: 50px;
+    }
+    .flex {
+         
+        margin-left: 0%; 
+    }
+    .contact {
+        width: 18%;
+    }
+    .right-block {
+      
+         
+    }
+    
+    }
+    @media  (max-width:874px) {
+        .nav-li {
+            margin-right: 20px;  
+          } 
+
+          .text-we-are {
+             
+            
+            top:35%; 
+            
+            font-size: 15px;
+            margin-left: 5%;
+            line-height: 1.5em;
+        
+        }
+        .h2{
+            font-size: 25px;
+            top: 15%;
+           }
+           .text-all-languages {
+            font-size: 25px; 
+            top: 20%;
+           }
+           .contact-us2  {
+            
+            top: 55%;
+        }
+        .h4-quadro {
+            top: 45%;
+            font-size: 18px;
+        }
+        .h4-title-online {
+            margin-top: 100px;
+            margin-left: 10%;
+            margin-bottom: 10px;
+            
+            font-size: 40px;
+
+}
+.h1 {
+    
+    margin-right: 50px;
+}
+.contact-us2 {
+    
+    width: 100px;
+    height: 35px;
+    font-size: 10px;
+    top: 50%;
+    }
+
+} 
+.contact-h3 {
+    font-size: 15px;
+}
+}
+@media  (max-width:750px) {
+    .translation-service-h2 {
+        font-size: 2rem;
+    }
+    .text-tel {
+        font-size: 25px;
+    }
+    .div-2013 {
+        width: 25%;
+        margin-right: 37.5%;
+        margin-left: 37.5%;
+    }
+    .contact {
+        width: 25%;
+        margin-right: 37.5%;
+        margin-left: 37.5%;
+    }
+    .contact-us {
+      right: 40%;
+    }
+    .text-wraper {
+        display: block; 
+    }
+    .div-text1 {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+.div-text2 {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    margin-top: 50px;
+}
+.get-ready {
+    text-align: center;
+}
+.section3 {
+    display: block;
+}
+.div1-sec3 {
+    width: 90%;
+    margin: auto;
+}
+.div2-sec3 {
+    width: 90%;
+    margin: auto;
+}
+.div2p {
+    text-align: center;
+}
+.div1h3 {
+    text-align: center;
+}
+.h {
+    width:20%;
+    margin: auto;
+    margin-top: 30px;
+    
+}
+
+
+
+
+@media  (max-width:657px) {
+    .nav-li {
+        display: none;  
+      } 
+      .bar {
+        display: block;
+      }
+      .div-six {
+        width: 180px;
+        height: 180px;
+      }
+      .contact-us {
+        right: 35%;
+      }
+      /* .h4-title-online {
+        margin-top: 100px;
+        margin-left: 8%;
+        margin-bottom: 10px;
+        
+        font-size: 35px;
+    }
+    .text-we-are {
+             
+            
+        top:28%; 
+        
+        width: 80%;
+    }
+    .contact-us2 {
+     top: 40%;
+        } */
+        .world-map {
+        
+            height: 100vh;
+        }
+        .h4-quadro {
+            margin-top: 25%;
+            
+            margin-left: 5%;
+
+        }
+        .quadro2 {
+    
+            margin-left: 35%;
+            
+        
+        }
+      
+        .quadro4 {
+           
+           margin-left: 35%;
+           margin-top: 45%;
+         
+               
+           
+           }
+           .quadro3 {
+           
+           
+            margin-top: 45%;
+          
+                
+            
+            }
+      
+}
+@media  (max-width:609px) {
+    .h4-quadro {
+     
+        width: 60%;
+        margin-left: 5%;
+}
+.quadro2 {
+    
+    margin-top: 40%;
+    margin-left: 5%;
+    
+
+}
+
+.quadro4 {
+   
+   
+   margin-top: 70%;
+ 
+       
+   
+   }
+   .quadro3 {
+   
+   
+    margin-top: 55%;
+  
+        
+    
+    }
+    .div-six {
+        width: 150px;
+        height: 150px;
+      }
+      .h3-six {
+        font-size: 12px;
+        line-height: 1.5em;
+
+}
+.h4-title-online {
    
     
-    width: 150px;
-    height: 45px;
+    font-size: 30px;
+
+}
+.h2-title-online {
+   
+    font-size: 25px;
+}
+.footer-p1 {
+    font-size: 10px;
+}
+.text-wraper-services {
+    display: block;
+}
+.arrow {
+    width:30px; 
+    height: 30px;
+}
+.slider-content {
     font-size: 20px;
+}}
+
+@media  (max-width:520px) {
+    .flex {
+        display: block;
+
+    }
+    .div-six {
+        width: 210px;
+        height: 210px;
+        margin-left: 10%;
+      }
+      .h3-six {
+        font-size: 15px;
+       
+
+}
+.contact {
+    width: 30%;
+    margin-right: 35%;
+    margin-left: 35%;
+}
+.div-2013 {
+    margin-left: 32%;
+}
+.contact-us {
+    right: 30%;
+  }
+  .get-ready {
+    font-size: 2rem; }
+    .wraper3 {
+        display: block; 
+       
+    }
+    .wrap3-div2 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .p-text3{
+        padding-bottom: 30px;
+    }
+.h4-title-online {
    
-    padding: 10px;
-    
-    top: 60%;
-    right: 48%;
+    font-size: 25px;
+    line-height: 1.5em;
+}
+.text-all-languages  {
+    top:25%;
+}
+.text-we-are {
+
+    font-size: 12px; 
+}
+    .contact-us2 {
+     right: 50%;
+}
+.h4-quadro {
+    font-size: 15px;
+}
+.reg-wraper {
+    display: block;
+}
+.footer-wraper {
+    display: block;
+}
+.footer1 {
+    width: 90%;
+    margin: auto;
+        }
+.icon-wraper {
+    width: 90%;
+    margin: auto;
+                }
+            
+.h5-footer {
+    padding-top: 20px;
+}
+.img-pen {
+    width: 100%;
+}
+.img-girl {
+    width: 100%;
+}
+        }
+}
+@media  (max-width:420px) {
+    .text2012 {
+        font-size: 25px;
+    }
+    .slider-content {
+        font-size: 15px;
+    }
+    .contact-us {
+        font-size: 18px;
+        width: 150px;
+        margin-right: 0%;
+    }
+    .who-title {
+        font-size: 2rem;
+    }
+    .div-2013 {
+        margin-left: 28%;
+    }
+    .translation-service-h2 {
+        font-size: 25px;
+    }
+    .contact-h3 {
+        font-size: 12px;
+    }
+  
+
+}
+
+@media  (max-width:370px) {
+.translation-service-h2 {
+    font-size: 20px;
+}
+.div-2013 {
+    margin-left: 25%;
+}
+.text-tel {
+    font-size: 20px;
+    margin-left: 3%;
 }
 }
+
+
+        

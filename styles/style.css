@@ -39,7 +39,8 @@
 }
 .nav-li {
     color: #fff;
-    margin-right: 40px;
+    margin-right: 20px;
+     
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
    
@@ -150,7 +151,7 @@
     cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); 
 }
 .slider-wraper {
     position: relative;
@@ -187,12 +188,14 @@
     width: 100%;
     filter: brightness(40%);
     position: relative;
+    height:100vh; 
  }
  .big-city-light{
     width: 100%;
     height: 400px;
     filter: brightness(40%);
     position: relative;
+    height:100vh; 
  }
  .who-title {
     color:#fff; 
@@ -200,8 +203,12 @@
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     position: absolute;
+    text-align: center;
     top: 20%;
-    right: 40%;
+    width:50%;
+    right:27%; 
+    left: auto; 
+    margin:auto; 
     animation:fadeOut; 
     animation-duration: 2s;
     
@@ -213,10 +220,17 @@
     font-weight: bold;
     position: absolute;
     top: 20%;
-    right: 33%;
+    width: 40%;
+    margin-right: 30%;
+    margin-left: 30%;
+    
+    align-items: center;
     animation:fadeOut; 
     animation-duration: 2s;
     
+ }
+ .translation-service-h2 {
+    text-align: center;
  }
  .text2012 {
 
@@ -232,23 +246,27 @@
 
     color:#fff; 
     font-size: 30px;
-    text-align: center;
-    margin-right: 40%;
+    text-align: center;  
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     position: absolute;
-    top: 50%;
+    top: 60%;
     
  }
  .div-2012 {
-width: 95%;
+width: 90%;
 margin: auto;
+margin-right: 10%;
+
 text-align: center;
+align-items: center;
 
  }
  .div-2013 {
-    width: 18%;
-    margin: auto;
-    text-align: center;
+    width: 20%;
+    margin-right: 40%;
+    margin-left: 40%;
+    align-items: center;
     
      }
  .contact-us {
@@ -266,6 +284,7 @@ text-align: center;
     position: absolute;
     top: 70%;
     right: 44%;
+    left: auto;
     border-radius: 50px;
     cursor: pointer;
     
@@ -278,14 +297,17 @@ text-align: center;
     height: 50px;
     background-color: #fff; 
     color: black;  
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bolder;
     text-align: center;
     padding: 10px;
     font-family: 'Poppins', sans-serif;
     position: absolute;
-    top: 35%;
-    right: 44%;
+    top: 45%;
+    width: 15%;
+    margin-right: 42.5%;
+    margin-left: 42.5%;
+    
     border-radius: 50px;
     cursor: pointer;
     
@@ -374,7 +396,7 @@ text-align: center;
     
     line-height: 1.5em; 
     margin-top: 50px;
-    margin-left: 15%;
+    text-align: center;
     font-family: 'Poppins', sans-serif
 }
 .offer {
@@ -465,7 +487,7 @@ width: 30%;
 .left-block {
     display: inline-block;
     vertical-align: top;
-    margin-left: 4%;
+    margin-left: 5%;
     margin-top: 50px;
     border: 5px solid;
     border-color: lightblue; 
@@ -474,12 +496,15 @@ width: 30%;
     line-height: 1.5em;
 }
 .right-block {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 10%;
+    display: block;
+    width: 90%;
+    margin: auto;
+    height: 100vh;
+    
     margin-top: 50px;
     border: 5px solid;
     border-color: lightblue; 
+    
 }
 .h3-contact {
     color: blue;
@@ -872,6 +897,12 @@ margin: auto;
     line-height: 2.5em;
 
 }
-@media screen {
+.img-blog {
+    width: 100%;
     
+}
+.content-blog {
+    width: 90%;
+    margin: auto;
+    align-items: center;
 }
