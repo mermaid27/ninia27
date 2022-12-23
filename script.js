@@ -65,15 +65,20 @@ arrowRight.addEventListener('click', function() {
 }) 
 
 
+arrowLeft.addEventListener('click', arrowLeftClick); 
+arrowRight.addEventListener('click', arrowRightClick); 
+
+setInterval( () => {
+  arrowRightClick(); 
+}, 3000); 
+
 
 
 slide()
 
 
 
-
-var splide = new Splide( '.splide' );
-splide.mount();  
+ 
 
 
 function reveal() {
@@ -143,95 +148,10 @@ function reveal() {
 
 
 
-    let mainWrapper = document.getElementById("postWraper");
-let overlay = document.getElementById("overlay");
-let content = document.getElementById("content");
-let closeIcon = document.getElementById("close");
+let currentPage = 1; 
 
-// ამ ფუქნციის საშუალებით ჩვენს ვაწყობთ მოთხოვნას
-function ajax(url, callback) {
-  let requist = new XMLHttpRequest();
-  requist.open("GET", url);
-  requist.addEventListener("load", function () {
-    // let pasuxiTesti = requist.responseText;
-    // let pasuxirogrocJs = JSON.parse(pasuxiTesti);
-    let dataRogorcJs = JSON.parse(requist.responseText);
-    callback(dataRogorcJs);
-  });
-  requist.send();
-}
-ajax("https://jsonplaceholder.typicode.com/posts", function (dataRogorcJs) {
-  //item - aris satitaod titotoeuli obiekti
-  dataRogorcJs.forEach((item) => {
-    createPost(item);
-  });
-});
+function getUsers (page) {
 
-//ამ ფუნქციის საშუალებით ჩვენ ვქმნით სათაიტაოდ თითოეულს დივს თავისი კონტენტით
-function createPost(item) {
-  let divWrapper = document.createElement("div");
-  divWrapper.classList.add("posts");
-  divWrapper.setAttribute("data-id", item.id);
-
-  let h4Tag = document.createElement("h4");
-  h4Tag.innerText = item.id;
-
-  let h2Tag = document.createElement("h2");
-  h2Tag.innerText = item.title;
-
-  let deleteButton = document.createElement("button");
-  deleteButton.innerText = " delete this Post";
-  deleteButton.setAttribute("data-id", item.id);
-
-  divWrapper.appendChild(h4Tag);
-  divWrapper.appendChild(h2Tag);
-  divWrapper.appendChild(deleteButton);
-
-  //washlis gilaksi funqcionali
-  deleteButton.addEventListener("click", function (event) {
-    event.stopPropagation();
-    let id = event.target.getAttribute("data-id");
-    let axaliUrl = `https://jsonplaceholder.typicode.com/posts/${id}`;
-    fetch(axaliUrl, {
-      method: "DELETE",
-    }).then(() => divWrapper.remove());
-  });
-
-  divWrapper.addEventListener("click", function (event) {
-    // console.log(event.target); - ეს არის ის დივი რომელზეც მოხდება ქლიქი
-    //კონკრეტული დივის დაჭერის დრო ვიღებ დივის data-id -ის მნიშვნელობას
-    // და ვინახავ id-ის ცვლადში
-    let id = event.target.getAttribute("data-id");
-    overlay.classList.add("active");
-    let axaliUrl = `https://jsonplaceholder.typicode.com/posts/${id}`;
-    ajax(axaliUrl, function (dataRogorcJs) {
-      overlayFunction(dataRogorcJs);
-    });
-  });
-
-  mainWrapper.appendChild(divWrapper);
-  console.log(divWrapper);
-}
-
-//ამ ფუნქციაში გვენქბეა გაწერილი ის ლოგიკა, რომლის შაშუალებით
-// წამოვირებთ პოსტის დეტალურ ინფორმაციას
-function overlayFunction(item) {
-  let description = document.createElement("p");
-  description.innerText = item.body;
-  content.appendChild(description);
-}
-
-//popapis close icon-is logika
-closeIcon.addEventListener("click", function () {
-  overlay.classList.remove("active");
-  content.innerHTML = " ";
-});
-
-//image example
-let currentPage = 1;
-let totalPages;
-
-function getUsers(page) {
   fetch("https://reqres.in/api/users?page=" + page, {
     method: "GET",
   })
@@ -242,27 +162,15 @@ function getUsers(page) {
       return dabrunebuliTextdad.json();
     })
     .then(function (dabrunebulirogorcJs) {
-      const fragment = new DocumentFragment();
+     
       dabrunebulirogorcJs.data.forEach((item) => {
         let li = document.createElement("li");
-
-        let span = document.createElement("span");
-        span.classList.add("span-user");
-        // li.innerText = item.first_name + item.last_name;
-        span.innerText = `${item.first_name} ${item.last_name}`;
-
-        let image = document.createElement("img");
-        image.src = item.avatar;
-        image.classList.add("image-user");
-        image.setAttribute("alt", "user-image");
-
-        li.appendChild(image);
-        li.appendChild(span);
-        fragment.appendChild(li);
+        li.innerText = `${item.first_name} ${item.last_name}`; 
+        document.getElementById("ul-users").appendChild(li);
       });
 
       document.getElementById("ul-users").innerHTML = " ";
-      document.getElementById("ul-users").appendChild(fragment);
+      
 
       totalPages = dabrunebulirogorcJs.total_pages;
     })
@@ -277,28 +185,18 @@ function getUsers(page) {
         document.getElementById("api-users").appendChild(p);
       }
     });
-}
-document.getElementById("loadprevuser").addEventListener("click", function () {
-  if (currentPage == 1) {
-    return;
-  }
-  // currentPage = currentPage - 1;
-  // currentPage -= 1;
-  currentPage--;
-  getUsers(currentPage);
-});
+  } 
 
-document.getElementById("loadnextuser").addEventListener("click", function () {
-  if (currentPage == totalPages) {
-    return;
-  }
-  // currentPage = currentPage + 1;
-  // currentPage += 1;
-  currentPage++;
-  getUsers(currentPage);
-});
+  document.getElementById('loadmore').addEventListener('click', function() {
+    currentPage ++; 
+    getUsers(currentPage); 
+  })
+  getUsers(currentPage);  
 
-getUsers(currentPage);
+
+
+
+
   
 
 
